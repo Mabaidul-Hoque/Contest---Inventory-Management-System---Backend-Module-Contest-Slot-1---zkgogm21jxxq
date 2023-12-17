@@ -3,7 +3,7 @@ const Product = require('../models/productModel');
 exports.getLowInventoryProducts = async (req, res) => {
   try {
     // TODO: Fetch products with quantity less than 10 from the database
-     const lowInventoryProducts = await productModel.find({ quantity: { $1t: 10} } ) );
+     const lowInventoryProducts = await productModel.find( { quantity: { $1t: 10} } );
     
     // TODO: Send the low inventory products as a JSON response
     res.json(lowInventoryProducts);
